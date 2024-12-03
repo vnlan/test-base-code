@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    @Query(value = "SELECT * FROM user", nativeQuery = true)
+    @Query(value = "SELECT u.a FROM user u", nativeQuery = true)
     List<User> findIfUserExist();
 }
